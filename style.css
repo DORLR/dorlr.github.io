@@ -34,10 +34,7 @@ body { margin: 0; background: #ffffff; }
     padding: 26px 0;
   }
   #dorl-r-showcase .label { color: var(--accent); }
-  #dorl-r-showcase .hero h1 {
-    font: 630 clamp(49px, 10cqw, 97px)/.98 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    letter-spacing: -.075em;
-  }
+  #dorl-r-showcase .hero h1 img { display: block; width: min(100%, 390px); height: auto; }
   #dorl-r-showcase .hero-title p {
     margin-top: 8px;
     font-size: clamp(18px, 3cqw, 28px);
