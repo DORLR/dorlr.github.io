@@ -90,6 +90,10 @@ body { margin: 0; background: #ffffff; }
   #dorl-r-showcase .groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 20px; }
   #dorl-r-showcase .group { min-height: 54px; border-top: 1px solid var(--rule); padding-top: 8px; }
   #dorl-r-showcase .group h3 { color: var(--accent); font-size: 14px; font-weight: 600; }
+  #dorl-r-showcase .names { display: grid; gap: 3px; margin: 6px 0 0; padding: 0; list-style: none; font-size: 13px; }
+  #dorl-r-showcase .tag { margin-left: 4px; color: var(--soft); font-size: 10px; white-space: nowrap; }
+  #dorl-r-showcase .alumni { grid-column: 1 / -1; margin-top: 12px; }
+  #dorl-r-showcase .alumni .names { display: flex; flex-wrap: wrap; gap: 3px 22px; }
   #dorl-r-showcase footer { border-top: 1px solid var(--rule); color: var(--soft); }
   @container (max-width: 460px) {
     #dorl-r-showcase .hero { grid-template-columns: 1fr; padding: 19px 0; }
