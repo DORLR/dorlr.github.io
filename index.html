@@ -3,9 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Projects and members of the DORL Robotics Team at the University of Toronto.">
   <title>DORLR | DORL Robotics Team</title>
+  <meta name="description" content="Robotics projects, benchmarks, and members of the DORL Robotics Team at the University of Toronto.">
+  <link rel="canonical" href="https://dorlr.github.io/">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="DORLR | DORL Robotics Team">
+  <meta property="og:description" content="Robotics projects, benchmarks, and members of the DORL Robotics Team at the University of Toronto.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dorlr.github.io/">
+  <meta property="og:image" content="https://dorlr.github.io/assets/team-corl-2026.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
 <div id="dorl-r-showcase">
@@ -13,9 +23,10 @@
     <a class="parent" aria-label="DORL Lab homepage" href="https://dorl.mie.utoronto.ca/" target="_blank" rel="noopener noreferrer">
       <img src="assets/dorl-logo.png" alt="Dynamic Optimization &amp; Reinforcement Learning Lab" width="1111" height="214">
     </a>
-    <nav class="nav mono" aria-label="DORL R">
+    <nav class="nav mono" aria-label="DORLR navigation">
       <a href="#dorl-r-work">Projects</a>
       <a href="#dorl-r-members">Members</a>
+      <a href="https://github.com/DORLR" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
     </nav>
   </header>
   <main>
@@ -24,36 +35,121 @@
         <h1><img src="assets/dorlr-wordmark.svg" alt="DORLR" width="242" height="52"></h1>
         <p>DORL Robotics Team</p>
       </div>
-      <figure class="frame">
-        <img src="assets/team-iros-2026.jpg" alt="Four DORL Robotics Team members behind the IROS 2026 sign in Pittsburgh" width="1112" height="1450">
-        <figcaption class="mono">IROS 2026 · Pittsburgh</figcaption>
-      </figure>
+      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Team photos">
+        <div class="carousel-stage">
+          <figure class="carousel-slide is-active" data-slide aria-hidden="false">
+            <img src="assets/team-corl-2026.jpg" alt="Five DORL Robotics Team members at CoRL 2026 in Austin" width="960" height="786" fetchpriority="high">
+          </figure>
+          <figure class="carousel-slide" data-slide aria-hidden="true">
+            <img src="assets/team-iros-2026.jpg" alt="Four DORL Robotics Team members behind the IROS 2026 sign in Pittsburgh" width="736" height="960" loading="lazy">
+          </figure>
+          <button type="button" class="carousel-arrow carousel-prev" data-prev aria-label="Previous team photo">
+            <span aria-hidden="true">&#8249;</span>
+          </button>
+          <button type="button" class="carousel-arrow carousel-next" data-next aria-label="Next team photo">
+            <span aria-hidden="true">&#8250;</span>
+          </button>
+        </div>
+        <div class="carousel-bar">
+          <p class="carousel-caption mono" data-caption aria-live="polite">CoRL 2026 · Austin</p>
+          <div class="carousel-dots" role="tablist" aria-label="Choose team photo">
+            <button type="button" class="carousel-dot is-active" data-dot="0" data-label="CoRL 2026 · Austin" role="tab" aria-selected="true" aria-label="CoRL 2026 · Austin"></button>
+            <button type="button" class="carousel-dot" data-dot="1" data-label="IROS 2026 · Pittsburgh" role="tab" aria-selected="false" aria-label="IROS 2026 · Pittsburgh"></button>
+          </div>
+        </div>
+      </div>
     </div>
+
     <section class="section" id="dorl-r-work" aria-labelledby="dorl-r-work-title">
       <div class="section-head"><h2 id="dorl-r-work-title">Projects</h2></div>
-      <article class="project">
-        <div class="project-cover mono">PROJECT IMAGE</div>
+
+      <article class="project" id="homeloop">
+        <a class="project-cover" href="https://arxiv.org/abs/2611.08914" target="_blank" rel="noopener noreferrer">
+          <img src="assets/projects/homeloop.jpg" alt="HomeLoop simulation environment showing domestic hazards, networked IoT sensors, and multi-camera views" width="900" height="479" loading="lazy">
+        </a>
         <div class="project-content">
-          <div class="project-header"><h3>Project title</h3><span class="mono label">Project page ↗</span></div>
-          <p class="project-summary"><strong>TL;DR</strong> A short summary of the task, the robot platform, and the main result.</p>
+          <div class="project-meta mono">
+            <span class="project-venue">arXiv · Nov 2026</span>
+          </div>
+          <div class="project-header">
+            <h3><a href="https://arxiv.org/abs/2611.08914" target="_blank" rel="noopener noreferrer">HomeLoop: A Simulation Framework and Benchmark for Robot-IoT Coordination in Everyday Domestic Assistance and Safety</a></h3>
+            <div class="project-links mono">
+              <a class="label" href="https://arxiv.org/abs/2611.08914" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+              <a class="label" href="https://arxiv.org/pdf/2611.08914" target="_blank" rel="noopener noreferrer">PDF ↗</a>
+            </div>
+          </div>
+          <p class="project-summary"><strong>TL;DR</strong> An Isaac Sim framework and 20-task benchmark evaluating VLM-driven home robots coordinating with smart-home IoT devices, cameras, and wearables under ambiguous, evolving domestic hazards.</p>
           <ul class="project-authors" aria-label="Authors">
-            <li><span class="author-avatar" aria-hidden="true"></span><span>Author name</span></li>
-            <li><span class="author-avatar" aria-hidden="true"></span><span>Author name</span></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/ramyelmallah/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/ramy-elmallah.jpg" alt="" width="26" height="26" loading="lazy"><span>Ramy ElMallah</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/marc-bishara/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/marc-bishara.jpg" alt="" width="26" height="26" loading="lazy"><span>Marc Bishara</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/hyegangkim/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/hyegang-kim.jpg" alt="" width="26" height="26" loading="lazy"><span>Hyegang Kim</span></a></li>
+            <li><span class="author-chip"><span class="author-avatar author-initials mono" aria-hidden="true">YZ</span><span>Yuxi Zhang</span></span></li>
+            <li><a class="author-chip" href="https://chongyuzhu.com/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/chongyu-zhu.jpg" alt="" width="26" height="26" loading="lazy"><span>Chongyu Zhu</span></a></li>
+            <li><a class="author-chip" href="https://cglee.mie.utoronto.ca/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/chi-guhn-lee.jpg" alt="" width="26" height="26" loading="lazy"><span>Chi-Guhn Lee</span></a></li>
           </ul>
         </div>
       </article>
-      <article class="project">
-        <div class="project-cover mono">PROJECT IMAGE</div>
+
+      <article class="project" id="routerlt">
+        <a class="project-cover project-cover--photo" href="https://chongyuzhu.com/routerlt/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/projects/routerlt.jpg" alt="RouteRLT multi-view real-robot setup on a Trossen Stationary AI rig performing connector pickup and insertion" width="900" height="735" loading="lazy">
+        </a>
         <div class="project-content">
-          <div class="project-header"><h3>Project title</h3><span class="mono label">Project page ↗</span></div>
-          <p class="project-summary"><strong>TL;DR</strong> A short summary of what the team built and how it performed on hardware.</p>
+          <div class="project-meta mono">
+            <span class="project-venue">arXiv · Oct 2026</span>
+            <span class="project-badge">IROS 2026 IARL Workshop</span>
+          </div>
+          <div class="project-header">
+            <h3><a href="https://chongyuzhu.com/routerlt/" target="_blank" rel="noopener noreferrer">RouteRLT — Generalists Act, Specialists Intervene: Modular Stage-Selective Reinforcement Learning for VLA Manipulation</a></h3>
+            <div class="project-links mono">
+              <a class="label" href="https://chongyuzhu.com/routerlt/" target="_blank" rel="noopener noreferrer">Project page ↗</a>
+              <a class="label" href="https://arxiv.org/abs/2609.26467" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+            </div>
+          </div>
+          <p class="project-summary"><strong>TL;DR</strong> Keeps a generalist VLA frozen while a learned GRU phase coordinator hands control to lightweight RL specialists during precision-critical stages, improving physical connector pickup-and-insertion success from 8.6% to 65.7% on a Trossen Stationary AI rig.</p>
           <ul class="project-authors" aria-label="Authors">
-            <li><span class="author-avatar" aria-hidden="true"></span><span>Author name</span></li>
-            <li><span class="author-avatar" aria-hidden="true"></span><span>Author name</span></li>
+            <li><a class="author-chip" href="https://chongyuzhu.com/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/chongyu-zhu.jpg" alt="" width="26" height="26" loading="lazy"><span>Chongyu Zhu</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/hyegangkim/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/hyegang-kim.jpg" alt="" width="26" height="26" loading="lazy"><span>Hyegang Kim</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/jadenhinds/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/jaden-hinds.jpg" alt="" width="26" height="26" loading="lazy"><span>Jaden Hinds</span></a></li>
+            <li><a class="author-chip" href="https://www.jsrojas.com/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/juan-sebastian-rojas.jpg" alt="" width="26" height="26" loading="lazy"><span>Juan Sebastian Rojas</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/ramyelmallah/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/ramy-elmallah.jpg" alt="" width="26" height="26" loading="lazy"><span>Ramy ElMallah</span></a></li>
+            <li><a class="author-chip" href="https://cglee.mie.utoronto.ca/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/chi-guhn-lee.jpg" alt="" width="26" height="26" loading="lazy"><span>Chi-Guhn Lee</span></a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project" id="wirecraft">
+        <a class="project-cover" href="https://chongyuzhu.com/wirecraft/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/projects/wirecraft.jpg" alt="WireCraft benchmark overview showing robot platforms, simulation tasks, real-world UR5 tasks, and demonstration sources" width="900" height="460" loading="lazy">
+        </a>
+        <div class="project-content">
+          <div class="project-meta mono">
+            <span class="project-badge project-badge--highlight">CoRL 2026 Spotlight</span>
+            <span class="project-venue">IROS 2026 DOM-R3 Oral</span>
+          </div>
+          <div class="project-header">
+            <h3><a href="https://chongyuzhu.com/wirecraft/" target="_blank" rel="noopener noreferrer">WireCraft: A Simulation Benchmark for Industrial DLO Manipulation</a></h3>
+            <div class="project-links mono">
+              <a class="label" href="https://chongyuzhu.com/wirecraft/" target="_blank" rel="noopener noreferrer">Project page ↗</a>
+              <a class="label" href="https://arxiv.org/abs/2606.18097" target="_blank" rel="noopener noreferrer">Paper ↗</a>
+              <a class="label" href="https://github.com/DORLR/WireCraft" target="_blank" rel="noopener noreferrer">Code ↗</a>
+            </div>
+          </div>
+          <p class="project-summary"><strong>TL;DR</strong> A configurable Isaac Lab simulation benchmark for industrial wire and cable manipulation covering connector insertion, clip routing, and channel seating across RL, imitation learning, and VLA baselines, with physical UR5 validation.</p>
+          <ul class="project-authors" aria-label="Authors">
+            <li><a class="author-chip" href="https://chongyuzhu.com/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/chongyu-zhu.jpg" alt="" width="26" height="26" loading="lazy"><span>Chongyu Zhu</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/ramyelmallah/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/ramy-elmallah.jpg" alt="" width="26" height="26" loading="lazy"><span>Ramy ElMallah</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/hyegangkim/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/hyegang-kim.jpg" alt="" width="26" height="26" loading="lazy"><span>Hyegang Kim</span></a></li>
+            <li><a class="author-chip" href="https://e-ndorfin.github.io/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/zachary-tang.jpg" alt="" width="26" height="26" loading="lazy"><span>Zachary Tang</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/jiachen-rao-b27a43233/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/jiachen-rao.jpg" alt="" width="26" height="26" loading="lazy"><span>Jiachen Rao</span></a></li>
+            <li><a class="author-chip" href="https://www.linkedin.com/in/artem-arutyunov/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/artem-arutyunov.jpg" alt="" width="26" height="26" loading="lazy"><span>Artem Arutyunov</span></a></li>
+            <li><span class="author-chip"><span class="author-avatar author-initials mono" aria-hidden="true">SH</span><span>Seungyeon Ha</span></span></li>
+            <li><a class="author-chip" href="https://cglee.mie.utoronto.ca/" target="_blank" rel="noopener noreferrer"><img class="author-avatar" src="assets/avatars/chi-guhn-lee.jpg" alt="" width="26" height="26" loading="lazy"><span>Chi-Guhn Lee</span></a></li>
           </ul>
         </div>
       </article>
     </section>
+
     <section class="section" id="dorl-r-members" aria-labelledby="dorl-r-members-title">
       <div class="section-head"><h2 id="dorl-r-members-title">Members</h2></div>
       <article class="advisor" aria-labelledby="advisor-name">
@@ -63,8 +159,8 @@
           <h3 id="advisor-name">Chi-Guhn Lee, PhD, P.Eng.</h3>
           <p class="advisor-role">Professor, Department of Mechanical &amp; Industrial Engineering, University of Toronto</p>
           <div class="advisor-links">
-            <a href="https://www.mie.utoronto.ca/faculty_staff/cglee/">Faculty profile ↗</a>
-            <a href="https://dorl.mie.utoronto.ca/">DORL Lab ↗</a>
+            <a href="https://www.mie.utoronto.ca/faculty_staff/cglee/" target="_blank" rel="noopener noreferrer">Faculty profile ↗</a>
+            <a href="https://dorl.mie.utoronto.ca/" target="_blank" rel="noopener noreferrer">DORL Lab ↗</a>
           </div>
         </div>
       </article>
@@ -119,7 +215,14 @@
       </div>
     </section>
   </main>
-  <footer class="mono"><span>DORL Robotics Team</span><a href="https://dorl.mie.utoronto.ca/" target="_blank" rel="noopener noreferrer">DORL Lab ↗</a></footer>
+  <footer class="mono">
+    <span>DORL Robotics Team</span>
+    <span class="footer-links">
+      <a href="https://github.com/DORLR" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://dorl.mie.utoronto.ca/" target="_blank" rel="noopener noreferrer">DORL Lab ↗</a>
+    </span>
+  </footer>
 </div>
 </body>
 </html>
